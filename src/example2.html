@@ -33,7 +33,7 @@
         <script src="js/quartzCron.js"></script>
         <script>
             $(document).on("click", "#myButton", function () {
-                $("#cronSection").msCron({
+                $("#cronSection").quartzCron({
                     setCron: $("#myCronValue").val(),
                     activeTab: $("select option:selected").val()
                 });

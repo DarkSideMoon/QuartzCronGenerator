@@ -1,6 +1,6 @@
 (function ($) {
 
-    $.fn.msCron = function (options) {
+    $.fn.quartzCron = function (options) {
         if (typeof options === "undefined") {
             options = {
                 getCron: "",
@@ -10,7 +10,7 @@
         }
         
         var mainDiv = $("<div/>", {id: "CronGenMainDiv", style: "padding:15px;", role:"tablist"});
-        var topMenu = $("<nav/>", { id: "msCronTabs"});
+        var topMenu = $("<nav/>", { id: "quartzCronTabs"});
         var insideDiv = $("<div/>", {id:"nav-tab", class:"nav nav-tabs", role:"tablist"});
 
         $(insideDiv).appendTo(topMenu);
@@ -240,7 +240,7 @@
 
         function generate() {
 
-            var activeTab = $("nav#msCronTabs div a.active").prop("id");
+            var activeTab = $("nav#quartzCronTabs div a.active").prop("id");
             var results = "", activeTab;
             switch (activeTab) {
                 case "msMinutesTab":
@@ -313,12 +313,12 @@
             if (validExp.length === 7) {
                 switch (actTab) {
                     case "MINUTES":
-                        $('#msCronTabs a[href="#Minutes"]').tab('show');
+                        $('#quartzCronTabs a[href="#Minutes"]').tab('show');
                         expression = expression.match(/\d+/g);
                         $("#MinutesInput").val(expression[2]);
                         break
                     case "HOURLY":
-                        $('#msCronTabs a[href="#Hourly"]').tab('show');
+                        $('#quartzCronTabs a[href="#Hourly"]').tab('show');
                         expression = expression.match(/\d+/g);
                         if (expression.length === 6) {
                             $("#HoursInput").val(expression[3]);
@@ -330,7 +330,7 @@
                         }
                         break
                     case "DAILY":
-                        $('#msCronTabs a[href="#Daily"]').tab('show');
+                        $('#quartzCronTabs a[href="#Daily"]').tab('show');
                         expression = expression.match(/\d+/g);
                         if (expression.length === 5) {
                             $("#DaysInput").val(expression[4]);
@@ -344,7 +344,7 @@
 
                         break
                     case "WEEKLY":
-                        $('#msCronTabs a[href="#Weekly"]').tab('show');
+                        $('#quartzCronTabs a[href="#Weekly"]').tab('show');
                         var weekdays = expression;
                         expression = expression.match(/\d+/g);
                         $("#WeeklyMinutes").val(expression[1]);
@@ -356,7 +356,7 @@
                         });
                         break
                     case "MONTHLY":
-                        $('#msCronTabs a[href="#Monthly"]').tab('show');
+                        $('#quartzCronTabs a[href="#Monthly"]').tab('show');
                         if (expression.indexOf('#') !== -1) {
                             $("input:radio[name=MonthlyRadio][value=2]").prop("checked", true);
                             $("#DayInWeekOrder").val(expression.substring(expression.indexOf('#'), expression.indexOf('#') - 3));
@@ -375,7 +375,7 @@
 
                         break
                     case "YEARLY":
-                        $('#msCronTabs a[href="#Yearly"]').tab('show');
+                        $('#quartzCronTabs a[href="#Yearly"]').tab('show');
                         if (expression.indexOf('#') !== -1) {
                             $("input:radio[name=YearlyRadio][value=2]").prop("checked", true);
                             $("#DayWeekForYear").val(expression.substring(expression.indexOf('#'), expression.indexOf('#') - 3));

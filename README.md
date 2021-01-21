@@ -1,9 +1,9 @@
-# QuartzCronGenerator 
+# QuartzCronGenerator ⚙️
 
-## Bootstrap-5 Cron expressions generator ⚙️
+## Bootstrap-5 Cron expressions generator
 
-**msCron** is a Jquery plug-in which helps you to build cron expressions. 
-**msCron** generated expressions are based on `Quartz` cron format. 
+**quartzCron** is a Jquery plug-in which helps you to build cron expressions. 
+**quartzCron** generated expressions are based on `Quartz` cron format. 
 
 ## Dependencies
 
@@ -14,17 +14,16 @@
 
   Intialization:
   
-      $(element).msCron();
+      $(element).quartzCron();
       
   Getting Cron Expression:
   
-     var cron = $("element").msCron();
-     
-    alert(cron.getCron )  //you can get the required CRON expression
+    var cron = $("element").quartzCron();
+    alert(cron.getCron)
     
   Setting CRON Expression:
   
-    $("element").msCron({
-        setCron: “0 0 12 1/1 * ? *”
+    $("element").quartzCron({
+        setCron: '0 0 12 1/1 * ? *'
         activeTab: “DAILY”
     });

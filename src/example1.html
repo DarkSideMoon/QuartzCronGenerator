@@ -23,7 +23,7 @@
 
         <script src="js/quartzCron.js"></script>
         <script>
-            var cron = $("#cron1").msCron();
+            var cron = $("#cron1").quartzCron();
             $(document).on("click", "#myButton", function () {
                 $("#myCronValue").val(cron.getCron);
 
