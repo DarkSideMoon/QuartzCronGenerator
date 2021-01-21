@@ -1,6 +1,6 @@
 # QuartzCronGenerator 
 
-## Bootstrap-5 Cron Expressions generator ⚙️
+## Bootstrap-5 Cron expressions generator ⚙️
 
 **msCron** is a Jquery plug-in which helps you to build cron expressions. 
 **msCron** generated expressions are based on `Quartz` cron format. 
