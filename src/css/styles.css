@@ -1,0 +1,27 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px;
+}
+
+footer {
+    background-color: #0e3f86;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    padding: 156px 0 100px;
+    background-color: #0e3f86;
+}
+
+section {
+    padding: 150px 0;
+}
