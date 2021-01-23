@@ -5,6 +5,9 @@
 **quartzCron** is a Jquery plug-in which helps you to build cron expressions. 
 **quartzCron** generated expressions are based on `Quartz` cron format. 
 
+## Sample 
+Sample of project you can find by the [link](https://darksidemoon.github.io/QuartzCronGenerator/) on github pages
+
 ## Dependencies
 
  * [jQuery](https://jquery.com/)
